@@ -2,21 +2,36 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Habitus Health - Protect Your Workforce. Build Resilience. Prove Your Impact.',
-  description: 'From preventing injuries to proving compliance, Habitus gives you the tools and insights to keep your people healthy, safe, and performing at their best.',
-  keywords: 'workplace safety, health and safety, compliance, injury prevention, workforce protection, ergonomics, DSE compliance',
+  title: {
+    default: 'AI-powered workplace health and safety platform for injury prevention, compliance, and wellbeing | Habitus Health',
+    template: '%s | Habitus Health'
+  },
+  description: 'Protect your workforce with Habitus Health. AI-powered risk detection, ergonomic support, and wellbeing tools for modern organisations.',
+  keywords: 'workplace ergonomics software, AI health and safety platform, injury risk assessment tool, manual handling risk reduction, workplace wellbeing solutions, digital DSE assessments, fatigue monitoring system, GDPR-compliant health platform',
   authors: [{ name: 'Habitus Health' }],
   metadataBase: new URL('https://habitus-health.vercel.app'),
   openGraph: {
-    title: 'Habitus Health - Protect Your Workforce. Build Resilience. Prove Your Impact.',
-    description: 'From preventing injuries to proving compliance, Habitus gives you the tools and insights to keep your people healthy, safe, and performing at your best.',
+    title: 'AI-powered workplace health and safety platform for injury prevention, compliance, and wellbeing | Habitus Health',
+    description: 'Protect your workforce with Habitus Health. AI-powered risk detection, ergonomic support, and wellbeing tools for modern organisations.',
     type: 'website',
-    locale: 'en_US',
+    locale: 'en_IE',
+    siteName: 'Habitus Health',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Habitus Health - Protect Your Workforce. Build Resilience. Prove Your Impact.',
-    description: 'From preventing injuries to proving compliance, Habitus gives you the tools and insights to keep your people healthy, safe, and performing at your best.',
+    title: 'AI-powered workplace health and safety platform for injury prevention, compliance, and wellbeing | Habitus Health',
+    description: 'Protect your workforce with Habitus Health. AI-powered risk detection, ergonomic support, and wellbeing tools for modern organisations.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 }
 
@@ -27,7 +42,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-white text-gray-900 antialiased">
+      <body className="antialiased">
         {children}
       </body>
     </html>
