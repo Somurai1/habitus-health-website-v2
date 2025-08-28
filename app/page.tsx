@@ -1,4 +1,3 @@
-import Navigation from '../components/Navigation'
 import Hero from '../components/Hero'
 import ProofSection from '../components/ProofSection'
 import SectorsSection from '../components/SectorsSection'
@@ -23,17 +22,18 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen">
-      <Navigation />
-      <Hero />
-      <ProofSection />
-      <SectorsSection />
-      <ChallengesSection />
-      <SolutionsSection />
-      <ModulesSection />
-      <CaseStudiesSection />
-      <FinalCTA />
+    <>
+      <div className="content-wrapper">
+        <Hero />
+        <ProofSection />
+        <SectorsSection />
+        <ChallengesSection />
+        <SolutionsSection />
+        <ModulesSection />
+        <CaseStudiesSection />
+        <FinalCTA />
+      </div>
       <Footer />
-    </main>
+    </>
   )
 }
